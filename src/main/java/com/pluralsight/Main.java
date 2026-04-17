@@ -44,6 +44,27 @@ public class Main {
 
             switch (homeChoice) {
 
+                case "1":
+                    System.out.println("\n₊✩‧₊˚౨ৎ˚₊✩‧₊Available Books₊✩‧₊˚౨ৎ˚₊✩‧₊");
+                    System.out.printf("%-5s %-20s %-40s%n", "ID", "ISBN", "Title");
+                    System.out.println("⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹");
+
+                    for (Book book : books) {
+                        if (!book.isCheckedOut()) {
+                            System.out.printf("%-5d %-20s %-40s%n",
+                                    book.getId(),
+                                    book.getIsbn(),
+                                    book.getTitle());
+                        }
+                    }
+
+                    System.out.print("\nEnter C to check in a book, or X to go back: ");
+                    String checkedOutChoice = keyboard.nextLine().trim();
+
+                    if (checkedOutChoice.equalsIgnoreCase("C")) {
+
+                    }
+
             }
         }
     }
