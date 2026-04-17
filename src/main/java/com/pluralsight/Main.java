@@ -71,7 +71,19 @@ public class Main {
                                 break;
                             }
                         }
+
+                        if (selectedBook == null) {
+                            System.out.println("Book not found! >~<");
+                        } else if (selectedBook.isCheckedOut()) {
+                            System.out.println("Sorry, that book is already checked out! ^^;");
+                        } else {
+                            System.out.print("Enter your name: ");
+                            String userName = keyboard.nextLine().trim();
+                            selectedBook.checkOut(userName);
+                            System.out.println( "\n\"" + selectedBook.getTitle() + "\" checked out to " + userName + "Enjoy! :3");
+                        }
                     }
+                    break;
 
             }
         }
