@@ -100,6 +100,10 @@ public class Main {
                                     book.getCheckedOutTo());
                         }
                     }
+                    System.out.print("\nEnter C to check in a book, or X to go back: ");
+                    String checkedOutChoice = keyboard.nextLine().trim();
+
+                    if (checkedOutChoice.equalsIgnoreCase("C"))
             }
         }
     }
