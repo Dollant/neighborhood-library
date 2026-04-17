@@ -62,6 +62,7 @@ public class Main {
                     String availableChoice = keyboard.nextLine().trim();
 
                     if (!availableChoice.equalsIgnoreCase("X")) {
+                        try {
                         int selectedId = Integer.parseInt(availableChoice);
                         Book selectedBook = null;
 
@@ -81,6 +82,10 @@ public class Main {
                             String userName = keyboard.nextLine().trim();
                             selectedBook.checkOut(userName);
                             System.out.println( "\n\"" + selectedBook.getTitle() + "\" checked out to " + userName + "Enjoy! :3");
+                        }
+
+                        } catch (NumberFormatException e) {
+                            System.out.println("Invalid input! Please enter a Book ID number. >~<");
                         }
                     }
                     break;
@@ -104,7 +109,7 @@ public class Main {
                     String checkedOutChoice = keyboard.nextLine().trim();
 
                     if (checkedOutChoice.equalsIgnoreCase("C")) {
-
+                        try{
                         System.out.print("Enter the Book ID to check in: ");
                         int checkInId = Integer.parseInt(keyboard.nextLine().trim());
                         Book bookToCheckIn = null;
@@ -124,7 +129,9 @@ public class Main {
                             bookToCheckIn.checkIn();
                             System.out.println("\n\"" + bookToCheckIn.getTitle() + "\" has been checked in. Thank you!");
                         }
-                    }
+                    } catch (NumberFormatException e) {
+                            }
+                        }
                     break;
 
                 case "3":
