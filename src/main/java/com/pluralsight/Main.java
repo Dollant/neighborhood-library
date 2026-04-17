@@ -132,6 +132,10 @@ public class Main {
                     System.out.println("\nThank you for using the Neighborhood Library. Goodbye!");
                     running = false;
                     break;
+
+                default:
+
+                    System.out.println("Invalid choice. Please enter 1, 2, or 3.");
             }
         }
     }
