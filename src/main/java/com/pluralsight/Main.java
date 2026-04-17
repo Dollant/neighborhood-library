@@ -30,5 +30,21 @@ public class Main {
                 new Book(19, "978-0-06-093549-0", "The Maze Runner"),
                 new Book(20, "978-0-14-028332-7", "Divergent")
         };
+
+        boolean running = true;
+
+        while (running) {
+            System.out.println("\n₊✩‧₊˚౨ৎ˚₊✩‧₊ Neighborhood Library ₊✩‧₊˚౨ৎ˚₊✩‧₊");
+            System.out.println("1 - Show Available Books");
+            System.out.println("2 - Show Checked Out Books");
+            System.out.println("3 - Exit");
+            System.out.print("Enter your choice (˶˃ ᵕ ˂˶) : ");
+
+            String homeChoice = keyboard.nextLine().trim();
+
+            switch (homeChoice) {
+
+            }
+        }
     }
 }
