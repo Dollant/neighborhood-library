@@ -138,5 +138,6 @@ public class Main {
                     System.out.println("Invalid choice. Please enter 1, 2, or 3.");
             }
         }
+        keyboard.close();
     }
 }
