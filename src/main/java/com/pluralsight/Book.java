@@ -15,4 +15,10 @@ public class Book {
         this.isCheckedOut = false;
         this.checkedOutTo = "";
     }
+
+    public int getId() { return id; }
+    public String getIsbn() { return isbn; }
+    public String getTitle() { return title; }
+    public boolean isCheckedOut() { return isCheckedOut; }
+    public String getCheckedOutTo() { return checkedOutTo; }
 }
