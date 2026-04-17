@@ -93,7 +93,7 @@ public class Main {
 
                     for (Book book : books) {
                         if (book.isCheckedOut()) {
-                            System.out.printf("%-5d %-20s %-40s%n",
+                            System.out.printf("%-5d %-20s %-40s %-20s%n",
                                     book.getId(),
                                     book.getIsbn(),
                                     book.getTitle(),
@@ -103,7 +103,30 @@ public class Main {
                     System.out.print("\nEnter C to check in a book, or X to go back: ");
                     String checkedOutChoice = keyboard.nextLine().trim();
 
-                    if (checkedOutChoice.equalsIgnoreCase("C"))
+                    if (checkedOutChoice.equalsIgnoreCase("C")) {
+
+                        System.out.print("Enter the Book ID to check in: ");
+                        int checkInId = Integer.parseInt(keyboard.nextLine().trim());
+                        Book bookToCheckIn = null;
+
+                        for (Book book : books) {
+                            if (book.getId() == checkInId) {
+                                bookToCheckIn = book;
+                                break;
+                            }
+                        }
+
+                        if (bookToCheckIn == null) {
+                            System.out.println("Book not found! >~<");
+                        } else if (!bookToCheckIn.isCheckedOut()) {
+                            System.out.println("That book is not currently checked out. ^w^");
+                        } else {
+                            bookToCheckIn.checkIn();
+                            System.out.println("\n\"" + bookToCheckIn.getTitle() + "\" has been checked in. Thank you!");
+                        }
+                    }
+                    break;
+
             }
         }
     }
