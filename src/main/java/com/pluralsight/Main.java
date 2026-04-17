@@ -61,6 +61,18 @@ public class Main {
                     System.out.println("\nEnter a Book ID to check out, or X to go back: ");
                     String availableChoice = keyboard.nextLine().trim();
 
+                    if (!availableChoice.equalsIgnoreCase("X")) {
+                        int selectedId = Integer.parseInt(availableChoice);
+                        Book selectedBook = null;
+
+                        for (Book book : books) {
+                            if (book.getId() == selectedId) {
+                                selectedBook = book;
+                                break;
+                            }
+                        }
+                    }
+
             }
         }
     }
