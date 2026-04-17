@@ -127,6 +127,11 @@ public class Main {
                     }
                     break;
 
+                case "3":
+
+                    System.out.println("\nThank you for using the Neighborhood Library. Goodbye!");
+                    running = false;
+                    break;
             }
         }
     }
